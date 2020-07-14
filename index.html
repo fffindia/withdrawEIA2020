@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Save EIA</title>
+	<script type="text/javascript">
+		
+		function sendEmail(){
+			var recipients = 'eia2020-moefcc@gov.in, pjavadekar@gmail.com, mefcc@gov.in';
+			var subject = "Request to Withdraw Draft EIA 2020 in the interest of Environmental and Public Welfare";
+			var body = `Dear Shri. Prakash Javadekar,
+
+In March 2020, during the COVID pandemic and under your leadership, the MOEFCC had released the Draft EIA 2020 Notification, and I am writing to you today to unequivocally request that this draft be withdrawn on account of how destructive it can prove to be for the ecology and the people of our great nation. 
+
+Though the notification states that it seeks to make the EIA process ‘more transparent and expedient’. But several renowned organizations, experts and the public have raised serious questions and concerns about the consequences, if such an amendment came into force. 
+
+There is a lot of sound scientific research emerging, linking the present pandemic to the vast destruction of natural habitats – which among numerous other ecosystem services, also greatly buffer zoonotic diseases like COVID – 19. This is in the larger context of a global climate breakdown – repercussions of which our country is already witnessing many, including the devastating Supercyclone Amphan in the East and the cyclone Nisarga in the West. In this light, the Draft EIA 2020 caters purely to the ‘ease of doing business’ in India and does not address these larger looming issues. This also comes at a time when the Government is opening up all its sectors to private companies – entities neither elected by or directly accountable to the people. This takes power away from the people which goes against our democratic ideals.
+
+The proposed notification considerably relaxes various guidelines, restrictions and safeguards which legally exist for our wilderness and local people. This is in contravention to the scope and spirit of Section 3 of the Environmental Protections Act (1986) itself. It seems to make circumstances strongly favourable to industrial and corporate interests. Pertinent examples of this are the allowance of post-facto clearances and the non-requirement of EIA for B2 projects, which include potentially harmful ones like river valley projects, tanneries, many chemical manufacturing units, petrochemical industries, expansion of national highways, etc. How can we expect the perpetrators of ecological crimes to keep themselves accountable? We cannot! It is understandable that the government is taking measures to counter the recent economic slowdown, but these measures need to be also cognizant of long term and far-reaching ecological and social impacts. This is not to mention that destruction of the environment is proven to be worse for the economy in the longer term.
+
+While there has been some streamlining with respect to the categorisation of projects, the public consultation step has been severely undermined. This dilutes an important democratic process ensuring the welfare of stakeholders in the project areas. It is not reasonable to expect that the public can get informed opinions on such short timelines.
+
+There are a number of other such exemptions given for industries and relaxations of restrictions, which presently exist as safeguards against destructive development. There is, as such, nothing in the notification which is for the protection and conservation of the environment itself and/or for public welfare. Clearing this draft would be an untold disaster for the long-term welfare of our nation and the world.
+
+It is laudable that the Ministry has extended the notice period for public review of this notification upto August 11th, considering numerous public representations and the lockdown situation. I further request you to kindly consider the above-mentioned arguments and withdraw this notification, keeping in mind the long-term welfare of our country’s natural wealth, local communities, and future generations.
+
+
+Regards,
+Concerned citizens
+`;
+
+	var altWords = {
+  "interest": [
+    "appeal",
+    "plea",
+    "demand",
+    "call",
+    "seeking",
+    "petition",
+    "asking"
+  ],
+  "Welfare": [
+    "Need",
+    "Well-being",
+    "Protection",
+    "Safety",
+    "Sake",
+    "Good"
+  ]
+}
+    console.log("replacing words");
+    for (var key in altWords) {
+        var arr = altWords[key];
+        var r = Math.floor((Math.random() * arr.length));
+        subject = subject.replace(key, arr[r])
+    }
+
+
+	var mailLink = document.createElement('a');
+	mailLink.href = "mailto:"+recipients+"?subject="+subject+"&body="+body.replace(/\n/g,"<br>");
+	mailLink.click();
+
+
+		}
+	</script>
+</head>
+<body onload="sendEmail()">
+
+	<!-- <a href="mailto:pj@gmail.com?body='stop this nonesense'">Send Email</a> -->
+	Instructions:
+	<br>
+	1. Email Application should open automatically. If your email application doesn;t open, try reloading the page
+	<br>
+	2. Hit send on your email application!
+	
+
+</body>
+</html>
